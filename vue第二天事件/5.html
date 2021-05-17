@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 修饰符 -->
+    <div id="app">
+        <!-- 对象 -->
+        <div :style="{
+            color:'orange',
+            fontSize:'100px'
+        }">雷神</div>
+
+
+        <!-- 数组 -->
+        <div :style="[
+        {
+            color:'cyan',
+            'font-size':'50px'
+        },
+        {
+            'margin-left':'500px'
+        }
+        ]">艾尼路</div>
+
+
+        <!-- 字符串 -->
+        <div :style="'color: bg; fontSize:100px'">鳄鱼</div>
+    </div>
+    <script src="./dist/5.js"></script>
+</body>
+
+</html>
