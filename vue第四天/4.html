@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>我是父组件:{{title}}</h1>
+        <h1>-----------------------------------</h1>
+        <!-- 子组件1 -->
+        <child1>
+            <template v-slot:a>
+                <div>
+                    <i>干了兄弟们-----{{title}}</i>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </div>
+            </template>
+
+
+        </child1>
+
+    </div>
+
+
+    <!-- 子组件1 -->
+    <template id="tpl1">
+            <div>
+                <h1>我是子组件2:{{title}}</h1>
+                <input type="" v-model="title">
+                <slot name="a"></slot>
+            </div>
+    </template>
+
+
+
+    <script src="./dist/4.js"></script>
+</body>
+
+</html>
