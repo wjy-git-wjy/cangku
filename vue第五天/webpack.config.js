@@ -7,7 +7,7 @@ module.exports = {
         alias: {
             //     // 注意此时的 '/'为E盘
             // vue$: '/node_modules/vue/dist/vue.js'
-            vue$: '/node_modules/vue/dist/vue.js'
+            vue$: '/node_modules/vue/dist/vue.js',
         }
     },
     //入口

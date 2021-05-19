@@ -10,12 +10,15 @@
 
 <body>
     <div id="app">
-        <h1>我是父组件:{{title}}</h1>
+        <h1>我是父组件:{{$store.state.msg}}</h1>
+        <h1>-----------------------------</h1>
+        <h1>我是getter:{{$store.getters.doubleNum}}</h1>
+        <button @click="resetNum">归零</button>
         <h1>-----------------------------------</h1>
         <!-- 子组件1 -->
-        <child1 :gm1="demo"></child1>
+        <child1></child1>
         <h1>-----------------------------------</h1>
-        <child2 :msg="title"></child2>
+        <child2></child2>
 
     </div>
 
@@ -23,8 +26,7 @@
     <!-- 子组件1 -->
     <template id="tpl1">
             <div>
-                <h1>我是子组件2:{{title}}</h1>
-                <input type="" v-model="title">
+                <button @click="$store.commit('addNum')">增加</button>
             </div>
     </template>
 
@@ -32,11 +34,11 @@
     <!-- 子组件2 -->
     <template id="tpl2">
         <div>
-            <h1>我是子组件2:{{title}}</h1>
+            <button @click="$store.commit('reduceNum')">减少</button>
         </div>
     </template>
 
-    <script src="./dist/3.js"></script>
+    <script src="./dist/4.js"></script>
 </body>
 
 </html>
