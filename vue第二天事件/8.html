@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 修饰符 -->
+    <div id="app">
+        <!-- 遍历的第一种形式 -->
+        <!-- <div v-for="value in 5" class="box">{{value}}</div> -->
+
+        <!-- 第二种 -->
+        <!-- <div v-for="(value,index) in 5" :key="index" class="box">{{value}}-------{{index}}</div> -->
+
+        <!-- 遍历对象 -->
+        <!-- <div v-for="(value,index) in obj" :key="index" class="box">{{value}}-------{{index}}</div> -->
+
+        <!-- 遍历数组 -->
+        <!-- <div v-for="(value,index) in news" :key="value" class="box">{{index}}-------{{value}}</div> -->
+
+
+
+
+        <!-- 没用模板 (这个没用模板，如果想遍历盒子里面的内容，则在每个内容的外面都会添加父元素)-->
+        <!-- <div v-for="(value,index) in news" :key="value">
+            <li>{{value}}</li>
+        </div>
+        <hr> -->
+
+        <!-- 用模板 (这个不会产生模板元素到页面上，指挥将里面元素循环创建出来)-->
+        <template v-for="(value,index) in news" :key="value">
+            <li>{{value}}</li>
+        </template>
+    </div>
+    <script src="./dist/8.js"></script>
+</body>
+
+</html>

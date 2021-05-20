@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 修饰符 -->
+    <div id="app">
+        <input type="" v-model="title">
+        <h1>我是父组件 :{{title}}</h1>
+        <h1>-------------------------------------</h1>
+
+        <!-- 自定义组件 -->
+        <sy102></sy102>
+
+    </div>
+    <!-- 不好使 -->
+    <!-- <div id="tpl">
+        <div>
+            <h1>子组件:{{title}}</h1>
+            <h1>子组件:{{name}}</h1>
+        </div>
+    </div> -->
+
+    <!-- 用script标签 -->
+    <!-- <script type="text/template" id="tpl">
+        <div>
+            <h1>子组件:{{title}}</h1>
+            <h1>子组件:{{name}}</h1>
+        </div>
+    </script> -->
+
+    <!-- 模板  推荐使用 -->
+    <template id="tpl">
+        <div>
+            <h1>子组件:{{title}}</h1>
+            <h1>子组件:{{name}}</h1>
+        </div>
+    </template>
+
+    <script src="./dist/5.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 修饰符 -->
+    <div id="app">
+        <!-- 对象 -->
+        <div :class="{box1:true,box2:false,'box3 box4':true}">雷神</div>
+        <!-- 数组 -->
+        <div :class="['box2','box1 box3']">艾尼路</div>
+        <!-- 字符串 -->
+        <div :class="'box3'+' box4'">鳄鱼</div>
+    </div>
+    <script src="./dist/4.js"></script>
+</body>
+
+</html>

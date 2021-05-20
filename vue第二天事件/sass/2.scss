@@ -1,0 +1,29 @@
+#shop {
+    width: 400px;
+    margin: 100px auto;
+    margin-bottom: 30px;
+}
+
+#shop img {
+    vertical-align: middle;
+    border: 2px solid red;
+}
+
+#size {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#size span {
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border: 2px solid #000;
+    text-align: center;
+    line-height: 42px;
+    &:hover {
+        border: 2px solid red;
+    }
+}

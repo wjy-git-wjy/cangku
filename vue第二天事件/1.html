@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-on指令 -->
+        <!-- v-on:click点击事件可以缩写为@click -->
+        <button v-on:click="eat">按钮1</button>
+        <!-- 语法糖@click -->
+        <button @click="eat">按钮2</button>
+        <!-- 右键事件 -->
+        <button @contextmenu="eat">按钮3</button>
+        <hr>
+        <!-- 没有参数，则不带括号，自动传入事件对象e -->
+        <button @click="eat">按钮4</button>
+        <!-- 带括号，他不自动传入事件对象，如果你想要事件对象，要$event -->
+        <button @click="eat()">按钮5</button>
+        <!-- $event -->
+        <button @click="eat(1,2,$event,null)">按钮6</button>
+
+
+    </div>
+    <script src="./dist/1.js"></script>
+</body>
+
+</html>
