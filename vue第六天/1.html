@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <a href="#/first">first</a>
+        <a href="#/second">second</a>
+        <a href="#/third">third</a>
+        <h1>app</h1>
+        <h1>-------------------------------------------------</h1>
+        <!-- 路由渲染位置 -->
+        <router-view></router-view>
+    </div>
+
+    <template id="first">
+        <div>
+            <h1>first</h1>
+            <h1>{{$route.fullPath}}</h1>
+        </div>
+    </template>
+
+    <template id="second">
+        <div>
+            <h1>second</h1>
+            <h1>{{xxoo}}</h1>
+        </div>
+    </template>
+
+    <template id="third">
+        <div>
+            <h1>third</h1>
+            <h1>{{fullPath}}--------------{{query}}</h1>
+        </div>
+    </template>
+
+    <script src="./dist/1.js"></script>
+</body>
+
+</html>
